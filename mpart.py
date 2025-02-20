@@ -1,5 +1,5 @@
-import pathlib, boto3, os, sys, datetime, pprint, random
-from yaml import load,dump,Loader,Dumper
+import pathlib, boto3, os, datetime, pprint, random
+from yaml import load, dump, Loader, Dumper
 from boto3.session import Session,Config
 
 configFile = os.path.join(pathlib.Path(__file__).resolve().parents[0], "config", "main.yaml")
@@ -107,10 +107,12 @@ class S3(object) :
 
 if __name__ == "__main__":
 
+    #################### Variables ############################################
     key = 'mpart_obj1'
-    uploadId = '1_1000000018001_5'
-    part = random.randbytes(1024)
-    partNumber = 1
+    uploadId = '1_1000000018001_5' # Change to a real uploadId
+    part = random.randbytes(1024) # This creates a 1KB part, change as desired
+    partNumber = 1 # Change (or dont) with every part upload. If you dont designated part is overwritten.
+    ############################################################################
 
     s3 = S3(s3Config = s3Config)
     s3.connect()
