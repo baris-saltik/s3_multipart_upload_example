@@ -1,0 +1,14 @@
+s3:
+  endpoint_url: http://:9020
+  bucketName: "bucketName"
+  aws_access_key_id: 'id'
+  aws_secret_access_key: 'secret' 
+  signature_version: 'v4'
+  use_ssl: false
+  verify: false
+  aws_session_token: false
+  addressing_style: 'path'
+  connect_timeout: 5
+  read_timeout: 5
+  max_attempts: 0
+
