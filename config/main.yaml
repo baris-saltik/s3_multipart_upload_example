@@ -1,8 +1,8 @@
 s3:
-  endpoint_url: http://:9020
-  bucketName: "bucketName"
-  aws_access_key_id: 'id'
-  aws_secret_access_key: 'secret' 
+  endpoint_url: http://10.10.10.10:9020
+  bucketName: "bucket1"
+  aws_access_key_id: key
+  aws_secret_access_key: secret
   signature_version: 'v4'
   use_ssl: false
   verify: false
@@ -11,4 +11,10 @@ s3:
   connect_timeout: 5
   read_timeout: 5
   max_attempts: 0
+dateTime:
+  zone: 'Asia/Dubai'
+  minutesOlder: 480 # 8 hours
+  dryRun: true
+
+
 
